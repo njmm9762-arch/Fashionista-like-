@@ -5,151 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fashionista</title>
 
-<!-- Open Graph للمشاركة -->
 <meta property="og:title" content="فاشونيستا - أفضل الفساتين للمرأة">
 <meta property="og:description" content="تصفح مجموعتنا الرائعة من الفساتين الأنيقة واطلب الآن! الموقع تحت الصيانة وسيكون جاهز خلال أسبوع.">
 <meta property="og:image" content="file_0000000033b471f4935d9abcb8ce457b.png">
 <meta property="og:url" content="https://fashionista-website.com">
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  margin:0;
-  padding:0;
-  background:#f5f5f5;
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  min-height:100vh;
-}
-.entry-container {
-  text-align:center;
-  margin-top:50px;
-}
-.entry-container button {
-  padding:15px 30px;
-  font-size:24px;
-  background:#ff4081;
-  color:white;
-  border:none;
-  border-radius:10px;
-  cursor:pointer;
-  box-shadow:0 4px 6px rgba(0,0,0,0.2);
-}
-.main-container {
-  display:none;
-  width:90%;
-  max-width:1200px;
-  background:white;
-  border-radius:15px;
-  padding:20px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);
-  text-align:center;
-  position:relative;
-  margin-bottom:50px;
-}
-header {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:15px;
-  background:#ff4081;
-  color:white;
-  padding:15px;
-  font-size:24px;
-  border-radius:10px;
-  margin-bottom:20px;
-}
-header img {
-  height:50px;
-  border-radius:10px;
-}
-#language {
-  position:absolute;
-  top:20px;
-  left:20px;
-  border-radius:50%;
-  width:40px;
-  height:40px;
-  text-align:center;
-  font-weight:bold;
-  border:1px solid #ccc;
-  cursor:pointer;
-}
-#search-bar {
-  width:60%;
-  padding:10px;
-  margin:10px auto 20px auto;
-  display:block;
-  border-radius:5px;
-  border:1px solid #ccc;
-}
-.container {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
-}
-.card {
-  background:#fff;
-  border-radius:10px;
-  box-shadow:0 4px 6px rgba(0,0,0,0.1);
-  width:calc(33% - 20px);
-  text-align:center;
-  padding:10px;
-  position:relative;
-}
-.card img {
-  width:100%;
-  border-radius:10px;
-  transition: all 0.3s ease;
-}
-button.buy-btn {
-  margin-top:10px;
-  padding:8px 12px;
-  background:#ff4081;
-  border:none;
-  color:white;
-  border-radius:5px;
-  cursor:pointer;
-}
-#cart {
-  position:fixed;
-  top:15px;
-  right:15px;
-  background:white;
-  border-radius:50%;
-  width:50px;
-  height:50px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-weight:bold;
-  cursor:pointer;
-  box-shadow:0 2px 4px rgba(0,0,0,0.2);
-}
-#cart-count {
-  position:absolute;
-  top:-8px;
-  right:-8px;
-  background:red;
-  color:white;
-  border-radius:50%;
-  width:18px;
-  height:18px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:10px;
-}
-#cartPage {
-  display:none;
-  margin-top:20px;
-  background:#ffe6f0;
-  padding:15px;
-  border-radius:10px;
-  font-weight:bold;
-}
+body {font-family: Arial, sans-serif;margin:0;padding:0;background:#f5f5f5;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;}
+.entry-container {text-align:center;margin-top:50px;}
+.entry-container button {padding:15px 30px;font-size:24px;background:#ff4081;color:white;border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 6px rgba(0,0,0,0.2);}
+.main-container {display:none;width:90%;max-width:1200px;background:white;border-radius:15px;padding:20px;box-shadow:0 4px 10px rgba(0,0,0,0.2);text-align:center;position:relative;margin-bottom:50px;}
+header {display:flex;align-items:center;justify-content:center;gap:15px;background:#ff4081;color:white;padding:15px;font-size:24px;border-radius:10px;margin-bottom:20px;}
+header img {height:50px;border-radius:10px;}
+#language {position:absolute;top:20px;left:20px;border-radius:50%;width:40px;height:40px;text-align:center;font-weight:bold;border:1px solid #ccc;cursor:pointer;}
+#search-bar {width:60%;padding:10px;margin:10px auto 20px auto;display:block;border-radius:5px;border:1px solid #ccc;}
+.container {display:flex;flex-wrap:wrap;justify-content:center;gap:15px;}
+.card {background:#fff;border-radius:10px;box-shadow:0 4px 6px rgba(0,0,0,0.1);width:calc(33% - 20px);text-align:center;padding:10px;position:relative;transition: transform 0.3s ease, box-shadow 0.3s ease;}
+.card img {width:100%;border-radius:10px;transition: all 0.3s ease;}
+.card:hover {transform: translateY(-10px) scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.3);}
+button.buy-btn {margin-top:10px;padding:8px 12px;background:#ff4081;border:none;color:white;border-radius:5px;cursor:pointer;transition: background 0.3s ease;}
+button.buy-btn:hover {background:#e73370;}
+#cart {position:fixed;top:15px;right:15px;background:white;border-radius:50%;width:50px;height:50px;display:flex;justify-content:center;align-items:center;font-weight:bold;cursor:pointer;box-shadow:0 2px 4px rgba(0,0,0,0.2);}
+#cart-count {position:absolute;top:-8px;right:-8px;background:red;color:white;border-radius:50%;width:18px;height:18px;display:flex;justify-content:center;align-items:center;font-size:10px;}
+#cartPage {display:none;margin-top:20px;background:#ffe6f0;padding:15px;border-radius:10px;font-weight:bold;}
+.placeholder {background:#ccc;display:flex;justify-content:center;align-items:center;height:150px;color:#555;border-radius:10px;}
 </style>
 </head>
 <body>
@@ -172,7 +51,7 @@ button.buy-btn {
   <input type="text" id="search-bar" placeholder="ابحث عن الفستان...">
 
   <div class="container" id="product-container">
-    <!-- سيتم توليد الفساتين هنا -->
+    <!-- الفساتين تولد هنا -->
   </div>
 
   <div id="cart">
@@ -183,73 +62,40 @@ button.buy-btn {
 </div>
 
 <script>
-// قائمة صور الفساتين
 const productImages = [
-  'e4eaf7a8c6ddfb04db61c6426a066c65.png',
-  '737ab681ff67b9e6f36756fe25f27c1d.png',
-  '35f370f49dc1de7021a7d3667ede2ca6.png',
-  '874968f87dc7afc984302b0f900b8f80.png',
-  '3989271f6f2de721b37beda8f5719be6.png',
-  '4c1e1029e7b3659bbe448080d4663a85.png',
-  'e781ea04ce9990f84f1574c0a64d5a23.png',
-  '6aa6a23b15aaf79be05e2eedd58088a3.png',
-  '68d3df26134075549a5bd77cbfb2717c.png',
-  'afc7d53e5170681931f394d4a48fed09.png',
-  '451c64ecb5c3996f680ae2f9b236fb3d.png',
-  '15465afe19af2d219665c1dac6c9beae.png',
-  '5f532ba13d7b8af2a3aef4a0cfb182ab.png',
-  '022155a6c18d5b68a3e968b1e2a237dc.png',
-  '2b028fec533a7a36d466d2aa60bdacb5.png',
-  '691cf0fa801255bada94c66fda6d17cf.png',
-  'e51daf31e9ada569a14d7a732f6d4d93.png',
-  '409cfb6ccb0b4f7a5e95010ab94fc407.png',
-  '23b54ce095437d7270698affab609759.png',
-  '8682e7d2d447ff99de87457f6117d27f.png',
-  'b5f580afdbd9895909c02e856ba73fd3.png',
-  '77f5adcf6ae22764862990e6202202a7.png',
-  '6afb3ab67f81c776779a72b92c1213de.png',
-  '67afff9d81eda747b1c8d177fa2fc22c.png',
-  'b0025257bad8a09c00ea10e9027fa133.png',
-  '1d05346960664fb4958d3d78b20944c7.png',
-  'f8fea2ef8ed1cdef27dc5a2aed279808.png',
-  'c197f8961b72d73f9231cb73d81f9d36.png',
-  'bbd1ae75745bd2da2c7a9202cec934f7.png',
-  '2c409d1e2d8e017ceb53a3a4075b249a.png',
-  '4aa13283197d9870b2eda3f5425ff884.png',
-  '2ba638bfe086b316bd230814dd2c5dde.png',
-  'c845a44c46b16a9e82a7bd990c8e2f5c.png',
-  '930f01e84d29d41f49ecea9b0909b125.png',
-  '70f0dd9e3407c1dfe68ee0b2d89172d0.png'
+'e4eaf7a8c6ddfb04db61c6426a066c65.png','737ab681ff67b9e6f36756fe25f27c1d.png','35f370f49dc1de7021a7d3667ede2ca6.png',
+'874968f87dc7afc984302b0f900b8f80.png','3989271f6f2de721b37beda8f5719be6.png','4c1e1029e7b3659bbe448080d4663a85.png',
+'e781ea04ce9990f84f1574c0a64d5a23.png','6aa6a23b15aaf79be05e2eedd58088a3.png','68d3df26134075549a5bd77cbfb2717c.png',
+'afc7d53e5170681931f394d4a48fed09.png','451c64ecb5c3996f680ae2f9b236fb3d.png','15465afe19af2d219665c1dac6c9beae.png',
+'5f532ba13d7b8af2a3aef4a0cfb182ab.png','022155a6c18d5b68a3e968b1e2a237dc.png','2b028fec533a7a36d466d2aa60bdacb5.png',
+'691cf0fa801255bada94c66fda6d17cf.png','e51daf31e9ada569a14d7a732f6d4d93.png','409cfb6ccb0b4f7a5e95010ab94fc407.png',
+'23b54ce095437d7270698affab609759.png','8682e7d2d447ff99de87457f6117d27f.png','b5f580afdbd9895909c02e856ba73fd3.png',
+'77f5adcf6ae22764862990e6202202a7.png','6afb3ab67f81c776779a72b92c1213de.png','67afff9d81eda747b1c8d177fa2fc22c.png',
+'b0025257bad8a09c00ea10e9027fa133.png','1d05346960664fb4958d3d78b20944c7.png','f8fea2ef8ed1cdef27dc5a2aed279808.png',
+'c197f8961b72d73f9231cb73d81f9d36.png','bbd1ae75745bd2da2c7a9202cec934f7.png','2c409d1e2d8e017ceb53a3a4075b249a.png',
+'4aa13283197d9870b2eda3f5425ff884.png','2ba638bfe086b316bd230814dd2c5dde.png','c845a44c46b16a9e82a7bd990c8e2f5c.png',
+'930f01e84d29d41f49ecea9b0909b125.png','70f0dd9e3407c1dfe68ee0b2d89172d0.png'
 ];
 
-const productNames = [
-  "فستان","فستان قوي","فستان سهره","فستان شكل حلو","فستان","فستان قوي","فستان سهره","فستان شكل حلو","فستان","فستان قوي","فستان سهره","فستان شكل حلو","فستان","فستان قوي","فستان سهره","فستان شكل حلو","فستان","فستان قوي","فستان سهره","فستان شكل حلو","فستان","فستان قوي","فستان سهره","فستان شكل حلو","فستان","فستان قوي","فستان سهره","فستان شكل حلو","فستان","فستان قوي","فستان سهره","فستان شكل حلو","فستان","فستان قوي","فستان سهره","فستان شكل حلو"
-];
+const productNames = Array(productImages.length).fill("فستان");
 
-let cart = [];
+let cart=[];
 
 const container = document.getElementById('product-container');
 const cartCount = document.getElementById('cart-count');
 const cartPage = document.getElementById('cartPage');
 
-// توليد الفساتين
 function renderProducts(filter=''){
   container.innerHTML='';
   productImages.forEach((imgSrc,i)=>{
-    if(productNames[i].includes(filter)){
-      const card = document.createElement('div');
-      card.className='card';
-      const img = document.createElement('img');
-      img.src=imgSrc;
-      const name = document.createElement('div');
-      name.innerText = productNames[i];
-      const btn = document.createElement('button');
-      btn.className='buy-btn';
-      btn.innerText='اطلب الآن';
+    if(productNames[i].includes(filter) || filter===''){
+      const card = document.createElement('div'); card.className='card';
+      const img = document.createElement('img'); img.src=imgSrc;
+      img.onerror=()=>{img.style.display='none'; const ph = document.createElement('div'); ph.className='placeholder'; ph.innerText='صورة مفقودة'; card.insertBefore(ph,img);}
+      const name = document.createElement('div'); name.innerText=productNames[i];
+      const btn = document.createElement('button'); btn.className='buy-btn'; btn.innerText='اطلب الآن';
       btn.onclick=()=> addToCart(i,img);
-      card.appendChild(img);
-      card.appendChild(name);
-      card.appendChild(btn);
+      card.appendChild(img); card.appendChild(name); card.appendChild(btn);
       container.appendChild(card);
     }
   });
@@ -260,31 +106,19 @@ function addToCart(index,img){
   setTimeout(()=>{
     img.style.transform='scale(1) translate(0,0)';
     cart.push(productNames[index]);
-    cartCount.innerText = cart.length;
+    cartCount.innerText=cart.length;
   },500);
 }
 
-// زر الدخول والحماسي
 document.getElementById('enterBtn').addEventListener('click',()=>{
   const msg = new SpeechSynthesisUtterance("مرحبا بك عزيزي العميل، نحن الآن على موقع فاشونيستا، أقوى المواقع لإدارة الفساتين والبيع والإيجار. للتواصل كلم 01211056530");
-  msg.lang='ar-SA';
-  msg.rate=1;
-  window.speechSynthesis.speak(msg);
+  msg.lang='ar-SA'; msg.rate=1; window.speechSynthesis.speak(msg);
   document.querySelector('.entry-container').style.display='none';
   document.querySelector('.main-container').style.display='block';
 });
 
-// السلة
-document.getElementById('cart').addEventListener('click',()=>{
-  cartPage.style.display='block';
-});
-
-// البحث
-document.getElementById('search-bar').addEventListener('input',(e)=>{
-  renderProducts(e.target.value);
-});
-
-// اللغة
+document.getElementById('cart').addEventListener('click',()=>{cartPage.style.display='block';});
+document.getElementById('search-bar').addEventListener('input',(e)=>{renderProducts(e.target.value);});
 document.getElementById('language').addEventListener('change',(e)=>{
   if(e.target.value==='en'){
     document.querySelector('header').innerText='Fashionista';
@@ -297,7 +131,6 @@ document.getElementById('language').addEventListener('change',(e)=>{
   }
 });
 
-// أول مرة عرض المنتجات
 renderProducts();
 </script>
 
